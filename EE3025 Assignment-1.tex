@@ -1,0 +1,237 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\singlespacing
+\usepackage[cmex10]{amsmath}
+
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{bm}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+
+\usepackage{longtable}
+\usepackage{multirow}
+
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{steinmetz}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{verbatim}
+\usepackage{tfrupee}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{graphicx}
+\usepackage{tkz-euclide}
+\usepackage{float}
+\usetikzlibrary{calc,math}
+\usepackage{listings}
+    \usepackage{color}                                            %%
+    \usepackage{array}                                            %%
+    \usepackage{longtable}                                        %%
+    \usepackage{calc}                                             %%
+    \usepackage{multirow}                                         %%
+    \usepackage{hhline}                                           %%
+    \usepackage{ifthen}                                           %%
+    \usepackage{lscape}     
+\usepackage{multicol}
+\usepackage{chngcntr}
+\usepackage[export]{adjustbox}
+
+\DeclareMathOperator*{\Res}{Res}
+
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+\def\inputGnumericTable{}                                 %%
+
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\begin{document}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+\raggedbottom
+\setlength{\parindent}{0pt}
+\providecommand{\mbf}{\mathbf}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newcommand{\sgn}{\mathop{\mathrm{sgn}}}
+\providecommand{\abs}[1]{left\vert#1\rightbegin {document}\vert}
+\providecommand{\res}[1]{\Res\displaylimits_{#1}} 
+\providecommand{\norm}[1]{left\lVert#1\rightbegin {document}\rVert}
+%\providecommand{\norm}[1]{\lVert#1\rVert}
+\providecommand{\mtx}[1]{\mathbf{#1}}
+\providecommand{\mean}[1]{E left[ #1 \rightbegin {document}]}
+\providecommand{\fourier}{\overset{\mathcal{F}}{ \rightleftharpoons}}
+%\providecommand{\hilbert}{\overset{\mathcal{H}}{ \rightleftharpoons}}
+\providecommand{\system}{\overset{\mathcal{H}}{ \longleftrightarrow}}
+	%\newcommand{\solution}[2]{\textbf{Solution:}{#1}}
+\newcommand{\solution}{\noindent \textbf{Solution: }}
+\newcommand{\cosec}{\,\text{cosec}\,}
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\numberwithin{equation}{subsection}
+\makeatletter
+\@addtoreset{figure}{problem}
+\makeatother
+\let\StandardTheFigure\thefigure
+\let\vec\mathbf
+\renewcommand{\thefigure}{\theproblem}
+\def\putbox#1#2#3{\makebox[0in][l]{\makebox[#1][l]{}\raisebox{\baselineskip}[0in][0in]{\raisebox{#2}[0in][0in]{#3}}}}
+     \def\rightbox#1{\makebox[0in][r]{#1}}
+     \def\centbox#1{\makebox[0in]{#1}}
+     \def\topbox#1{\raisebox{-\baselineskip}[0in][0in]{#1}}
+     \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
+\vspace{3cm}
+\title{EE3025 ASSIGNMENT- 1}
+\author{S.sahithi - ES18BTECH11015}
+\maketitle
+\newpage
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+Download all codes from 
+\begin{lstlisting}
+https://github.com/GuttaRamaneesh/EE3025
+\end{lstlisting}
+%
+\section{\textbf{Problem}}
+    
+Modify the following code given in problem 2.3 with different input parameters to get the best possible output.
+\begin{lstlisting}
+import soundfile as sf
+from scipy import signal
+    
+#read .wav file
+input_signal,fs = sf.read('Sound_Noise.wav')
+    
+#sampling frequency of Input signal
+sampl_freq=fs
+    
+#order of the filter
+order = 3
+    
+#cutoff frequency 4kHz
+cutoff_freq=4000.0
+    
+#digital frequency
+Wn=2*cutoff_freq/sampl_freq
+    
+# b and a are numerator and denominator polynomials respectively
+b, a = signal.butter(order,Wn,'low')
+    
+#filter the input signal with butterworth filter
+output_signal = signal.filtfilt(b, a, input_signal)
+#output_signal = signal.lfilter(b, a, input_signal)
+    
+#write the output signal into .wav file
+sf.write('Sound_With_ReducedNoise.wav', output_signal, fs)
+    
+\end{lstlisting}
+  \section{\textbf{Solution}}
+  The main parameters for a standard Butterworth filter are
+  \begin{description}[font=$\bullet$\scshape\bfseries]
+  \item[]{Cutoff frequency}
+  \item[]{Order of the filter}
+  \item[]{function for applying the filter}
+  \end{description}
+  
+  \subsection{\textbf{Cutoff Frequency}}
+  Cutoff frequency for a Butterworth filter is the $-3dB$ point after which all the frequency components roll off down to zero.\\
+  To select a good cutoff frequency, we observe the spectogram from Problem 2.2 and conclude that most of the frequencies corresponding to piano notes are around mid point of 440Hz and 4700Hz, so let the cutoff frequency be $(440+4700)/2 = 2570Hz$
+  \subsection{\textbf{Order of the filter}}
+  The main disadvantage of the Butterworth filter is that it achieves the pass band flatness at the expense of a wide transition band as the filter changes from the pass band to the stop band.\\
+  We can fix this by increasing the order, but having a very high order would create numerical instabilities while simulating. So we will stick to the general order 4.
+  \subsection{\textbf{function for applying the filter}}
+  The latter function just passes the ray through the butterworth filter this introduces a phase shit of -π/2 whereas the signal.filtfilt does more than that .It is a forward or backward filter .This helps to cancel the phase shift earlier . For getting the good results ,we can apply signal.filtfilt mora than once .
+  But the only backdrop we can see in this filter is it can only be used on recorded signals that are already completed.
+  
+\section{\textbf{Results}}
+    After applying the filter with above parameters we observe that we still have noise. The frequency response of signal before and after applying the filter shows that the transition region is too wide, there are too many non zero frequency components after the cutoff frequency.
+\\
+\\
+\\
+\\
+\captionsetup[figure]{label format=empty}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1\columnwidth]{prefilter.PNG}
+\caption{Before Filtering}
+\label{fig:Figure.1}
+\includegraphics[width=1\columnwidth]{postfilter.PNG}
+\caption{After Filtering}
+\label{fig:Figure.2}
+\end{figure}
+    To overcome this we would need a steeper transition. Since we cant increase the order, one solution is to cascade multiple better worth filters. The transfer function rolls off to zero from pass band to stop band, as we cascade more and more filters the gain values$<1$ would get multiplied and reach closer to zero.
+\begin{center}
+\begin{tabular}{ |c|c|c| } 
+ \hline
+ Parameter & Original & Filtered\\
+ \hline
+ Cutoff Frequency & $2570Hz$ & $2570 Hz$\\ 
+ \hline
+ Order & - & 4\\ 
+ \hline
+No. of Cascades & - & 19\\ 
+ \hline
+Fraction of signal & 82.35\% & 99.51\%\\
+before cutoff & & &\\
+\hline
+Fraction of signal  & 17.64\% & 0.485\%\\
+after cutoff & & &\\
+\hline
+\end{tabular}
+\end{center}
+The clear information for understanding about the  noise present in the signal we sum up all the non zero frequency
+components before and after the cutoff frequency to define the metric fraction which tells us how much non zero frequency component is present before and after the cutoff
+
+The input and output wav files can be found at -
+input:
+\begin{lstlisting}
+https://github.com/GuttaRamaneesh/EE3025/blob/main/Sound_Noise.wav
+\end{lstlisting}
+output:
+\begin{lstlisting}
+https://github.com/GuttaRamaneesh/EE3025/blob/main/Reduced_Noise.wav
+\end{lstlisting}
+\end{document}
