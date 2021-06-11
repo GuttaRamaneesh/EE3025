@@ -199,14 +199,14 @@ sf.write('Sound_With_ReducedNoise.wav', output_signal, fs)
 \caption{Before Filtering}
 \label{fig:Figure.1}
 \includegraphics[width=1\columnwidth]{postfilter.PNG}
-\caption{After Filtering}
+\caption{After Cascaded Filtering}
 \label{fig:Figure.2}
 \end{figure}
     To overcome this we would need a steeper transition. Since we cant increase the order, one solution is to cascade multiple better worth filters. The transfer function rolls off to zero from pass band to stop band, as we cascade more and more filters the gain values$<1$ would get multiplied and reach closer to zero.
 \begin{center}
 \begin{tabular}{ |c|c|c| } 
  \hline
- Parameter & Original & Filtered\\
+ Parameter & Original & C.Filtered\\
  \hline
  Cutoff Frequency & $2570Hz$ & $2570 Hz$\\ 
  \hline
